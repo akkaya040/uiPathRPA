@@ -1,7 +1,7 @@
 {
   "name": "uiPathRPA",
   "description": "That is sample project to show ability of uiPath",
-  "main": "Samples\\LoopSample.xaml",
+  "main": "RPAs\\dataManipulation.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.7.2]",
     "UiPath.Mail.Activities": "[1.7.2]",
