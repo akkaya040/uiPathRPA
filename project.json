@@ -1,7 +1,7 @@
 {
-  "name": "GuessingGame",
-  "description": "Blank Process",
-  "main": "Main.xaml",
+  "name": "uiPathRPA",
+  "description": "That is sample project to show ability of uiPath",
+  "main": "ReadDirectory.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.7.2]",
     "UiPath.Mail.Activities": "[1.7.2]",
