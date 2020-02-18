@@ -25,7 +25,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -42,6 +42,7 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="dataManipulation" sap:VirtualizedContainerService.HintSize="736,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -50,12 +51,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,170 360,170</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,250 360,250</av:PointCollection>
         <x:Double x:Key="Width">701.5</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
     </Flowchart.StartNode>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
@@ -206,14 +207,14 @@
         </ui:ForEach>
       </Sequence>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID0">
+    <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">360,139</av:Point>
           <av:Size x:Key="ShapeSize">200,62</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Sequence: Contain and Split" sap:VirtualizedContainerService.HintSize="797,584" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <Sequence DisplayName="Sequence: Contain and Split" sap:VirtualizedContainerService.HintSize="200,62" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Default="success" Name="status" />
           <Variable x:TypeArguments="x:String" Default="Execution ended successful!" Name="messages" />
@@ -258,6 +259,58 @@
           </If.Else>
         </If>
       </Sequence>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">360,225.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,49</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart DisplayName="Now" sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+        <Flowchart.Variables>
+          <Variable x:TypeArguments="x:String" Default="WORLD!!!" Name="world" />
+        </Flowchart.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,300 200,300</av:PointCollection>
+            <x:Double x:Key="Width">655</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Flowchart.StartNode>
+          <x:Reference>__ReferenceID0</x:Reference>
+        </Flowchart.StartNode>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,135.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box - Now " sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot; Date: &quot; + Now.ToString]" />
+        </FlowStep>
+        <FlowStep>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,205.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box - Now year-month " sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot; Date: &quot; + Now.ToString(&quot;MMMM yyyy&quot;)]" />
+        </FlowStep>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">0,275.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,49</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box - Now " sap:VirtualizedContainerService.HintSize="200,49" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[String.Format(&quot;Hello {0} {1:MMMM yyyy}&quot;,world,Now)]" />
+        </FlowStep>
+      </Flowchart>
     </FlowStep>
   </Flowchart>
 </Activity>
